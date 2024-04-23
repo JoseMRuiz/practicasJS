@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="formulario">
+        nombre: <input type="text" name="nombre" value="juan" />
+        <br />
+        apellido: <input type="text" name="apellido" value="perez" />
+    </form>
+    <button onclick='escondervalores()'>Mostrar </button>
+    <div id="valores"></div>
+    <script>
+        function escondervalores() {
+            let formulario = document.forms['formulario'];
+            let texto = '';
+            let nombre = formulario['nombre'];
+            let apellido = formulario['apellido'];
+            texto = nombre.value + '<br/>' + apellido.value;
+            document.getElementById('valores').innerHTML = texto;
+            const form = document.getElementById('formulario')
+            form.style.display = "none"
+        }
+    </script>
+</body>
+
+</html>
